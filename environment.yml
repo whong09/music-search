@@ -1,0 +1,24 @@
+name: music-search                                                              
+channels:                                                                       
+  - defaults                                                                    
+  - conda-forge                                                                 
+  - pytorch                                                                     
+dependencies:         
+  - python=3.10
+  # ML framework
+  # For CPU-only (t3.medium), use:
+  - pytorch
+  - torchvision
+  - torchaudio
+  # For GPU (g4dn.xlarge), you’ll switch to cudatoolkit=11.6 later
+  # Data & audio processing
+  - numpy
+  - scipy
+  - pretty_midi
+  - librosa
+  - ffmpeg           # for any audio rendering
+  # Vector search
+  - faiss-cpu        # on GPU node replace with faiss-gpu
+  # AWS
+  - boto3
+  - tqdm
